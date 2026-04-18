@@ -1,0 +1,5 @@
+.floor
+.ceil
+.abs
+.round
+.pow

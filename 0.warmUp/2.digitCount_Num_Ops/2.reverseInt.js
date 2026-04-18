@@ -1,4 +1,5 @@
 function solve(n) {
+  let copyNum = n;
   n = Math.abs(n);
 
   let reverse = 0;
@@ -7,8 +8,13 @@ function solve(n) {
     reverse = reverse * 10 + remainder;
     n = Math.floor(n / 10);
   }
-  console.log(reverse);
+
+  let limit = Math.pow(2, 31);
+
+  if (reverse < -limit || reverse > limit) return 0;
+
+  return copyNum > 0 ? reverse : -reverse;
 }
 
-const n = -123;
-solve(n);
+const n = 1223;
+console.log(solve(n));
