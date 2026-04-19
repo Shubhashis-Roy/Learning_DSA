@@ -1,15 +1,12 @@
-function printPyramid(n) {
-  for (let i = 1; i <= n; i++) {
-    let row = " ";
-    for (let j = 1; j <= n - i; j++) {
-      row = row + " ";
-    }
-
-    for (let k = 1; k <= 2 * i - 1; k++) {
-      row = row + "*";
-    }
-    console.log(row);
+function solve(n) {
+  let newNum = 0;
+  while (n > 0) {
+    let remainder = n % 10;
+    newNum = newNum * 10 + remainder;
+    n = Math.floor(n / 10);
   }
+  return newNum;
 }
+let arr = 123;
 
-printPyramid(5);
+console.log(solve(arr));
