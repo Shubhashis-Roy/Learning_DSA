@@ -1,3 +1,5 @@
 https://leetcode.com/problem-list/array/
 
 Brute force approch
+
+XOR || bitwise XOR
