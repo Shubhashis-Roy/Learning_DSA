@@ -40,9 +40,10 @@ MyLinkedList.prototype.addAtTail = function (val) {
   while (curr.next != null) {
     curr = curr.next;
   }
+  //   sdnsnk
 
   curr.next = newNode;
-  this.size++;
+  //   this.size++;
 };
 
 // MyLinkedList.prototype.addAtTail = function (val) {
