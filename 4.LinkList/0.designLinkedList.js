@@ -33,6 +33,8 @@ MyLinkedList.prototype.addAtTail = function (val) {
 
   if (this.head === null) {
     this.head = newNode;
+    this.size++;
+
     return;
   }
 
@@ -40,22 +42,10 @@ MyLinkedList.prototype.addAtTail = function (val) {
   while (curr.next != null) {
     curr = curr.next;
   }
-  //   sdnsnk
 
   curr.next = newNode;
-  //   this.size++;
+  this.size++;
 };
-
-// MyLinkedList.prototype.addAtTail = function (val) {
-//   const newNode = new Node(val);
-//   if (!this.head) this.head = newNode;
-//   else {
-//     let curr = this.head;
-//     while (curr.next) curr = curr.next;
-//     curr.next = newNode;
-//   }
-//   this.size++;
-// };
 
 MyLinkedList.prototype.addAtIndex = function (index, val) {
   // Corner Case
